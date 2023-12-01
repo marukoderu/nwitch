@@ -12,7 +12,7 @@ head1, head2 = st.columns([1,10])
 with head1:
     st.image("./assets/images/logo.png", width=100)
 with head2:
-    st.markdown('<p class="custom-class">Nwitch</p>', unsafe_allow_html=True)
+    st.title("Nwitch")
 st.markdown('<style>' + open('style.css').read() +
             '</style>', unsafe_allow_html=True)
 

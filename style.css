@@ -22,7 +22,7 @@ section[data-testid='stSidebar'] {
         background-color: #392e5c;
         overflow-x: hidden;
         transition: 0.5s ease;
-        /* padding-top: 60px; */
+        padding-top: 30px;
         white-space: nowrap;
     }
 
@@ -58,7 +58,7 @@ section[data-testid='stSidebar'] {
         background-color: #392e5c;
         overflow-x: hidden;
         transition: 0.5s ease;
-        /* padding-top: 60px; */
+        padding-top: 30px;
         white-space: nowrap;
     }
 

@@ -1,6 +1,9 @@
 /* home.css */
 
 .custom-class {
+    display: flex;
+    align-items: center;
+    height: auto;
     color: red;
     font-size: 20px;
 }
