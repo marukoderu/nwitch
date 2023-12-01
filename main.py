@@ -3,20 +3,31 @@ from streamlit_player import st_player
 import streamlit as st
 
 st.set_page_config(layout="wide")
-st.image("./assets/images/logo.png", width=100)
-st.markdown('<style>' + open('./style.css').read() +
+with open("home.css", "r") as css_file:
+    custom_css = css_file.read()
+
+st.markdown('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />', unsafe_allow_html=True)
+st.markdown(f'<style>{custom_css}</style>', unsafe_allow_html=True)
+head1, head2 = st.columns([1,10])
+with head1:
+    st.image("./assets/images/logo.png", width=100)
+with head2:
+    st.markdown('<p class="custom-class">Nwitch</p>', unsafe_allow_html=True)
+st.markdown('<style>' + open('style.css').read() +
             '</style>', unsafe_allow_html=True)
 
+
+
 with st.sidebar:
-    tabs = on_hover_tabs(tabName=['Dashboard', 'Series', 'Movies'],
-                         iconName=['dashboard', 'movie', 'people'],
-                         styles={'navtab': {'background-color': '#111',
-                                            'color': '#818181',
+    tabs = on_hover_tabs(tabName=['Home', 'Trending', 'Category', 'Liked Videos', 'Watch Later', 'Playlist'],
+                         iconName=['home', 'tag', 'category', 'thumb_up', 'smart_display', 'playlist_play'],
+                         styles={'navtab': {'background-color': '#392e5c',
+                                            'color': '#FFFFFF',
                                             'font-size': '18px',
-                                            'transition': '.3s',
+                                            'transition': '.25s',
                                             'white-space': 'nowrap',
                                             'text-transform': 'uppercase'},
-                                 'tabOptionsStyle': {':hover :hover': {'color': 'red',
+                                 'tabOptionsStyle': {':hover :hover': {'color': '#9146ff',
                                                                        'cursor': 'pointer'}},
                                  'iconStyle': {'position': 'fixed',
                                                'left': '7.5px',
